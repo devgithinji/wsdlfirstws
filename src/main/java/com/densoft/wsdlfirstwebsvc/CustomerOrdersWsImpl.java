@@ -1,6 +1,7 @@
 package com.densoft.wsdlfirstwebsvc;
 
 import com.bharath.ws.trainings.*;
+import org.apache.cxf.feature.Features;
 
 import java.math.BigInteger;
 import java.util.ArrayList;
@@ -8,6 +9,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+@Features(features = "org.apache.cxf.ext.logging.LoggingFeature")
 public class CustomerOrdersWsImpl implements CustomerOrdersPortType {
 
     Map<BigInteger, List<Order>> customerOrders = new HashMap<>();
